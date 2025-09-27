@@ -1,16 +1,14 @@
-package tests
+package tests_go
 
 import (
 	"testing"
-
-	"github.com/BDarde/CRUD-em-go/person"
 )
 
 func TestServicePerson_Create(t *testing.T) {
 	tests := []struct {
 		name string // description of this test case
 		// Named input parameters for target function.
-		recieve person.Person
+		recieve Person
 		wantErr bool
 	}{
 		{},
@@ -19,7 +17,7 @@ func TestServicePerson_Create(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			// TODO: construct the receiver type.
-			var ps person.ServicePerson
+			var ps ServicePerson
 			gotErr := ps.Create(tt.recieve)
 			if gotErr != nil {
 				if !tt.wantErr {
