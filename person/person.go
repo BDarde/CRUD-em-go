@@ -6,6 +6,17 @@ import (
 	"strings"
 )
 
+type Person struct {
+	Id int `json:"id"`
+	PersonRecieve
+}
+
+type PersonRecieve struct {
+	Name  string `json:"name"`
+	Email string `json:"email"`
+	Cpf   string `json:"cpf"`
+}
+
 func (p PersonRecieve) Validate() error {
 
 	if len(p.Name) == 0 {

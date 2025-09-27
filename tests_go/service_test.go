@@ -2,6 +2,8 @@ package tests
 
 import (
 	"testing"
+
+	"github.com/BDarde/CRUD-em-go/person"
 )
 
 func TestServicePerson_Create(t *testing.T) {
